@@ -1,0 +1,238 @@
+body, html {
+  background-color: #DDA977;
+  padding: 0;
+  margin: 0;
+}
+
+img {}
+
+section {
+  position: relative;
+  height: 102vh !important;
+}
+
+.splash {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.tekst {
+  position: absolute;
+  left: 2%;
+  bottom: 48%;
+}
+
+.fit {
+  animation: move 13s !important;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  height: 102vh;
+  width: 102vw;
+  object-fit: cover;
+  object-position: 30%;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5rem;
+  color: #552700;
+}
+
+h1 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  color: #552700;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #552700;
+}
+
+.line-1 {
+  width: 10em;
+  opacity: 0;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  font-family: 'Roboto Mono', monospace;
+  border-right: .15em solid #552700;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.line-2 {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: type2 7s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type2 7s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  font-family: 'Roboto Mono', monospace;
+  border-right: .15em solid #552700;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.line-3 {
+  margin: 1rem;
+  width: 43px;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  ;
+  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  ;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 13.5s;
+  animation-delay: 13.5s;
+  font-family: 'Roboto Mono', monospace;
+  border-right: .15em solid #552700;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animation */
+/* Splash move 1 */
+@keyframes move {
+  0% {
+    object-position: 66%;
+  }
+
+  100% {
+    object-position: 26%;
+  }
+}
+
+/* The typing effect */
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {
+    border-right: .15em solid #552700;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  99.9% {
+    border-right: .15em solid #552700;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  50% {
+    width: 100%;
+    opacity: 1;
+    border-right: .15em solid #552700;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  60% {
+    width: 100%;
+    opacity: 1;
+    border-right: .15em solid #552700;
+  }
+
+  99.9% {
+    border-right: .15em solid #552700;
+  }
+
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+    border-right: .15em solid #552700;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
