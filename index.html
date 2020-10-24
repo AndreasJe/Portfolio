@@ -5,35 +5,91 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
   <title>Portfolio</title>
 </head>
 
 <body>
   <section id="splash-container">
-    <div class="container-fluid splash" id="">
-      <img src="portrat.svg" class="fit" alt="">
-      <div class="tekst">
-        <h3 class="line-1">Hi! I'm Andreas</h3>
+    <div class="container-fluid splash" id="splash">
+      <!--   <img src="portrat.svg" class="fit" id="splash" alt=""> -->
+      <div class="tekst" id="textbox">
+        <h2 class="line-1 noselect">Hi! I'm Andreas</h2>
 
-        <h1 class="line-2">This is my Portfolio</h1>
-        <p class="line-3">Continue></p>
-
+        <h1 class="line-2 noselect" id="animate-time">Welcome to my Portfolio</h1>
+        <div onclick="moveSplash()" class="lap" id="knap">
+          <span class="line-3 mx-auto noselect">Continue&#8250;</span>
+        </div>
       </div>
     </div>
+
+    <div class="container mx-auto d-flex justify-content-center align-content-center mx-auto" id="about">
+      <div id="positions" class="overskrift  noselect">
+        <h2 style="border-bottom: 1px solid #552700; width:60%; ">Looking for a new </h2>
+        <h1><span class="txt-rotate" data-period="1000" data-rotate='[ "Content Creator?","Graphic Designer?","Video Production Manager?", "Front-End Developer?", "Back-End Developer?", "Multimedia designer?" ]'></span>
+        </h1>
+      </div>
+      <h2 id="undertitel" class="mx-auto" style="text-align: center;">SIT BACK AND RELAX!<br> I MIGHT BE WHAT YOU'RE LOOKING FOR. </h2>
+
+      <div class="container knapper mx-auto">
+        <div class="no-select mx-auto lap" onclick="showContent()" id="next-container">
+          <span class="no-select" id="next-knap">Continue&#8250;</span>
+        </div>
+      </div>
+      <div class="mx-auto align-content-center no-select" id="describe">
+        <h2> Let me tell you a bit about myself, before we move on to my previous work.</h2>
+        <p> I'm a 30 year old fellow, currently on my 3rd semester as a Multimediadesigner at KEA. Before i started at KEA, i've had a taste of alot of educations - meaning my skills are broad,
+          ranging from
+          woodwork to coding to rehabilitation of wild animals. <br> <br> When i havent been working or studying, i've been travelling, and voluntered in South Africa and Thailand on nature conservation projects with Projects Abroad. Here i've
+          learned how to stand on my own
+          feet in a completely different culture, while being almost completely isolated from the "real" world. <br><br> My passion has always been
+          with design and aesthetics - no matter the subject. Everything started with a camera, and a love for cinematography, both still and moving. <br> Now as a
+          <b>Multimedia Designer</b>, my creative life is oriented around branding, content creation and web-design as a whole. I love challenging the conventions by thinking out of the box and provoke the ideas of functional design. <br>
+        </p>
+        <div class="scroll-down" id="scroll-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
     </div>
+
+
+
+    <div class="container-fluid  d-flex flex-column justify-content-center align-content-center " id="nav">
+      <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
+        <a href="#">Who am i?</a>
+      </div>
+      <h1 class="m-5 mx-auto">Previous work:</h1>
+      <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
+        <a href="#">Webdesign</a>
+      </div>
+      <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
+        <a href="#">Video</a>
+      </div>
+      <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
+        <a href="#">Photography</a>
+      </div>
+    </div>
+
+
+
   </section>
-
   <section id="test">
+    <div class="container-fluid" id="content">
 
-    <div class="row">
-      <div class="col-md-8">
-        <img class="img-fluid" src="https://images.unsplash.com/photo-1601758004584-903c2a9a1abc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt=""></div>
-      <div class="col-md-4">
-        <img class="img-fluid" src="https://images.unsplash.com/photo-1603187481390-4a074c877204?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt=""></div>
+      <div class="row">
+        <div class="col-md-8">
+          <img class="img-fluid" src="https://images.unsplash.com/photo-1601758004584-903c2a9a1abc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt=""></div>
+        <div class="col-md-4">
+          <img class="img-fluid" src="https://images.unsplash.com/photo-1603187481390-4a074c877204?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt=""></div>
+      </div>
     </div>
   </section>
 

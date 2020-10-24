@@ -1,65 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
   background-color: #DDA977;
-  padding: 0;
-  margin: 0;
+  scroll-behavior: smooth;
+  color: #916740;
 }
 
-img {}
+@font-face {
+  font-family: 'CooperBold';
+  src: url('font/cooperhewitt-bold-webfont.eot');
+  src: url('font/cooperhewitt-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('font/cooperhewitt-bold-webfont.woff') format('woff'),
+    url('font/cooperhewitt-bold-webfont.ttf') format('truetype'),
+    url('font/cooperhewitt-bold-webfont.svg#font/cooperhewitt-bold-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CooperNormal';
+  src: url('font/cooperhewitt-medium-webfont.eot');
+  src: url('font/cooperhewitt-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('font/cooperhewitt-medium-webfont.woff') format('woff'),
+    url('font/cooperhewitt-medium-webfont.ttf') format('truetype'),
+    url('font/cooperhewitt-medium-webfont.svg#font/cooperhewitt-bold-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CooperLight';
+  src: url('font/cooperhewitt-light-webfont.eot');
+  src: url('font/cooperhewitt-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('font/cooperhewitt-light-webfont.woff') format('woff'),
+    url('font/cooperhewitt-light-webfont.ttf') format('truetype'),
+    url('font/cooperhewitt-light-webfont.svg#font/cooperhewitt-bold-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 section {
-  position: relative;
+  position: fixed;
   height: 102vh !important;
+  overflow: hidden;
 }
 
+/* Sections*/
+#test {
+  display: none;
+  z-index: 999;
+  background-color: #DDA977;
+  height: 0vh;
+}
+
+#content {
+  display: none;
+}
+
+/* SPLASH Elementer */
 .splash {
   padding: 0 !important;
   margin: 0;
+  height: 102vh;
+  width: 102vw;
+  background-image: url(portrat.svg);
+  background-position: 60%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .tekst {
   position: absolute;
   left: 2%;
-  bottom: 48%;
+  top: 40%;
 }
 
-.fit {
-  animation: move 13s !important;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  height: 102vh;
-  width: 102vw;
-  object-fit: cover;
-  object-position: 30%;
+/* ABOUT Elementer */
+#about {
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
 }
 
+#about h1 {
+  font-family: 'CooperBold';
+  font-size: 3.5rem;
+  width: 100%;
+}
+
+#about h2 {
+  font-size: 0.8rem;
+}
+
+#describe {
+  display: none;
+  overflow-y: scroll;
+  top: 20%;
+  position: fixed;
+  height: 60vh;
+  width: 80vw;
+  padding: 1rem;
+}
+
+#describe::-webkit-scrollbar {
+  display: none;
+}
+
+#describe h2 p {
+  padding: 0.5rem;
+}
+
+.overskrift {
+  opacity: 1;
+  transition: 1s;
+  position: fixed;
+  top: 20%;
+  width: 85%;
+  left: 3%;
+}
+
+#undertitel {
+  opacity: 0;
+  position: fixed;
+  top: 75%;
+  width: 70%;
+}
+
+/* NAV Elementer */
+#nav {
+  visibility: hidden;
+  position: static;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+/* Basic Tekst Settings */
 p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.5rem;
-  color: #552700;
+  font-family: 'CooperLight';
+  font-size: 0.9rem;
+  padding: 1rem;
+  letter-spacing: 0.05rem
 }
 
 h1 {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'CooperBold';
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem
+}
+
+h2 {
+  font-family: 'CooperNormal';
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem
+}
+
+a {
+  font-family: 'CooperLight';
   font-size: 1rem;
   color: #552700;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.8rem;
+a:hover {
+  font-size: 1.2rem;
+  transition: 600ms;
   color: #552700;
+  user-select: none;
+  text-decoration: none;
+  font-family: 'Inconsolata', monospace;
 }
 
+/* TypeWriter Setup */
 .line-1 {
-  width: 10em;
+  width: 100px;
   opacity: 0;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
+  -webkit-animation: type 1s steps(15, end);
+  animation: type 1s steps(15, end);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
-  font-family: 'Roboto Mono', monospace;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  font-family: 'CooperNormal';
   border-right: .15em solid #552700;
   white-space: nowrap;
   overflow: hidden;
@@ -68,49 +200,280 @@ h3 {
 .line-2 {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type2 7s steps(40, end), blink .5s step-end infinite alternate;
-  animation: type2 7s steps(40, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 8s;
-  animation-delay: 8s;
+  -webkit-animation: type2 4.5s steps(23, end), blink .5s step-end infinite alternate;
+  animation: type2 4.5s steps(23, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'CooperBold';
   border-right: .15em solid #552700;
   white-space: nowrap;
   overflow: hidden;
+  margin-bottom: 1.3rem;
+  letter-spacing: -0.5px;
 }
 
 .line-3 {
-  margin: 1rem;
-  width: 43px;
+  margin: 0;
+  width: 80%;
   opacity: 0;
-  -webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation: type3 2s steps(9, end), blink .5s step-end infinite alternate;
   ;
-  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(9, end), blink .5s step-end infinite alternate;
   ;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 13.5s;
-  animation-delay: 13.5s;
-  font-family: 'Roboto Mono', monospace;
+  -webkit-animation-delay: 7.8s;
+  animation-delay: 7.8s;
+  font-family: 'CooperNormal';
   border-right: .15em solid #552700;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
+  font-size: 0.5rem;
 }
 
-/* Animation */
-/* Splash move 1 */
-@keyframes move {
-  0% {
-    object-position: 66%;
-  }
+.splash span {
+  width: 40px;
+}
 
-  100% {
-    object-position: 26%;
-  }
+.knapper {
+  font-family: 'CooperNormal';
+  position: fixed;
+  bottom: 10%;
+  width: 25%;
+}
+
+.line4 {
+  margin: 0;
+  width: 80%;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(9, end), blink .5s step-end infinite alternate;
+  ;
+  animation: type3 2s steps(9, end), blink .5s step-end infinite alternate;
+  ;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  font-family: 'CooperNormal';
+  border-right: .15em solid #552700;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 0.5rem;
+}
+
+/*Animation til "Continue" Knap  */
+.lap {
+  opacity: 0;
+  width: 50px;
+  height: 25px;
+  border: 1px solid #916740;
+  font-size: 0.5rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+}
+
+.lap::before, .lap::after {
+  position: absolute;
+  background: #DDA977;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.lap::before {
+  height: 25px;
+  width: 35px;
+}
+
+.lap::after {
+  width: 50px;
+  height: 10px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lap:hover::before {
+  width: 0px;
+  background: #DDA977;
+}
+
+.lap:hover::after {
+  height: 0px;
+  background: #DDA977;
+}
+
+.lap:hover {
+  background: #DDA977;
+}
+
+/* Animation til "NAV" Knapper  */
+.navknap {
+  display: none;
+  width: 180px;
+  height: 60px;
+  border: 1px solid #916740;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  margin-bottom: 3rem;
+}
+
+.navknap::before,
+.navknap::after {
+  position: absolute;
+  background: #DDA977;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.navknap::before {
+  height: 60px;
+  width: 150px;
+}
+
+.navknap::after {
+  width: 180px;
+  height: 20px;
+}
+
+.navknap:hover::before {
+  width: 0px;
+  background: #DDA977;
+}
+
+.navknap:hover::after {
+  height: 0px;
+  background: #DDA977;
+}
+
+.navknap:hover {
+  background: #DDA977;
+}
+
+/* Cursor Styling */
+.cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+h1.cursor::after {
+  height: 24px;
+  width: 13px;
+}
+
+p.cursor::after {
+  height: 13px;
+  width: 6px;
+}
+
+.scroll-down {
+  position: absolute;
+  top: 60%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.scroll-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.scroll-down span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #552700;
+  border-right: 1px solid #552700;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+/* Animations-klasser */
+.firstmove {
+  background-position: 28%;
+  -webkit-background-position: 35%;
+  transition: 6s;
+  -webkit-transition: 6s;
+}
+
+.secondmove {
+  background-position: -5%;
+  -webkit-background-position: -5%;
+  transition: 5s;
+  -webkit-transition: 5s;
+}
+
+.show {
+  opacity: 1 !important;
+  -webkit-animation: fade-in 1s ease-out both;
+  animation: fade-in 1s ease-out both;
+}
+
+.hide {
+  opacity: 0 !important;
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both;
+}
+
+.flicker-out-1 {
+  -webkit-animation: flicker-out-1 2s linear both;
+  animation: flicker-out-1 2s linear both;
+}
+
+.slide-in-left {
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* The typing effect */
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
 @keyframes type {
   0% {
     width: 0;
@@ -219,7 +582,6 @@ h3 {
   }
 
   100% {
-    width: 100%;
     opacity: 1;
     border-right: .15em solid #552700;
   }
@@ -233,6 +595,430 @@ h3 {
 
 @-webkit-keyframes blink {
   50% {
-    border-color: tranparent;
+    border-color: transparent;
+  }
+}
+
+/* Flicker Effect */
+@-webkit-keyframes flicker-out-1 {
+  0% {
+    opacity: 1;
+  }
+
+  13.9% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  14.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  22.9% {
+    opacity: 1;
+  }
+
+  23% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  24.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  34.9% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  39.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  42.9% {
+    opacity: 1;
+  }
+
+  43% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  44.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  54.9% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  69.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  69.5% {
+    opacity: 1;
+  }
+
+  69.9% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  79.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  79.9% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  89.8% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  89.9% {
+    opacity: 1;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  90% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker-out-1 {
+  0% {
+    opacity: 1;
+  }
+
+  13.9% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  14.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  22.9% {
+    opacity: 1;
+  }
+
+  23% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  24.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  34.9% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  39.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  42.9% {
+    opacity: 1;
+  }
+
+  43% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  44.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  54.9% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  69.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  69.5% {
+    opacity: 1;
+  }
+
+  69.9% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  79.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  79.9% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  89.8% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  89.9% {
+    opacity: 1;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  90% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slidein Effect */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Generel skjul*/
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Generel skjul*/
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media query  */
+@media screen and (min-width: 1000px) {
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.5rem;
+    color: #552700;
+  }
+
+  h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
+    color: #552700;
+  }
+
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: #552700;
+  }
+
+  a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #552700;
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-size: 1.8rem;
+    transition: 600ms;
+    color: #552700;
+    user-select: none;
+    text-decoration: none;
   }
 }
