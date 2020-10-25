@@ -16,16 +16,16 @@
 
 <body>
   <section id="splash-container">
+    <div class="tekst" id="textbox">
+      <h2 class="line-1 noselect">Hi! I'm Andreas</h2>
+
+      <h1 class="line-2 noselect" id="animate-time">Welcome to my Portfolio</h1>
+      <div onclick="moveSplash()" class="lap" id="next1">
+        <span class="line-3 mx-auto noselect">Continue&#8250;</span>
+      </div>
+    </div>
     <div class="container-fluid splash" id="splash">
       <!--   <img src="portrat.svg" class="fit" id="splash" alt=""> -->
-      <div class="tekst" id="textbox">
-        <h2 class="line-1 noselect">Hi! I'm Andreas</h2>
-
-        <h1 class="line-2 noselect" id="animate-time">Welcome to my Portfolio</h1>
-        <div onclick="moveSplash()" class="lap" id="next1">
-          <span class="line-3 mx-auto noselect">Continue&#8250;</span>
-        </div>
-      </div>
     </div>
 
     <div class="container mx-auto d-flex justify-content-center align-content-center mx-auto" id="about">
@@ -56,7 +56,7 @@
         <h2> Let me tell you a bit about myself, before we move on to my previous work.</h2>
         <p> I'm a 30 year old fellow, currently on my 3rd semester as a Multimediadesigner at KEA. Before i started at KEA, i've had a taste of alot of educations - meaning my skills are broad,
           ranging from
-          woodwork to coding to rehabilitation of wild animals. <br> <br> When i haven't been working or studying, i've been travelling, and voluntered in South Africa and Thailand on nature conservation projects with Projects Abroad. Here i've
+          woodwork to coding to rehabilitation of wild animals. <br> <br> When i haven't been working or studying, i've been travelling, and volunteered in South Africa and Thailand on nature conservation projects with Projects Abroad. Here i've
           learned how to stand on my own
           feet in a completely different culture, while being almost completely isolated from the "real" world. <br><br> My passion has always been
           with design and aesthetics - no matter the subject. Everything started with a camera, and a love for cinematography, both still and moving. <br> Now as a
@@ -296,7 +296,7 @@
       <!-- //Frivilligt -->
       <div class="container mb-5 mt-5">
 
-        <h3>Volutering:</h3>
+        <h3>Volunteering:</h3>
         <ul class="ul_main">
           <li class="udd1">Project's Abroad<ul class="ul_main">
               <li class="udd2">Conservation - South Africa<ul>
@@ -353,8 +353,8 @@
 
 
     <div class=" container-fluid  d-flex flex-column justify-content-center align-content-center " id="nav">
-      <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
-        <a href="#">Go back</a>
+      <div onclick="window.location.reload(false); " class=" navknap d-flex justify-content-center align-content-center mx-auto">
+        <a>Go back</a>
       </div>
       <h2 class="m-5 mx-auto">What do you want to see?</h2>
       <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
