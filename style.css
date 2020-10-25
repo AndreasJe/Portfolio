@@ -101,11 +101,11 @@ section {
 #describe {
   display: none;
   overflow-y: scroll;
-  top: 20%;
+  top: 15%;
   position: fixed;
   height: 60vh;
-  width: 80vw;
-  padding: 1rem;
+  width: 100vw;
+  padding: 2rem;
 }
 
 #describe::-webkit-scrollbar {
@@ -418,6 +418,136 @@ p.cursor::after {
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
+}
+
+/* OVERLAY til SKILLS; */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.skill:hover+.overlay {
+  opacity: 1;
+}
+
+.skill-value-procent {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* SKILLS: LIQUID FILL ANIMATION */
+#skill {
+  border: 2px solid #552700;
+  border-radius: 50%;
+  padding: 0;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background: rgba(153, 84, 30, 0.65);
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.skill-value {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  color: #552700;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  margin: 0;
+  z-index: 999;
+  font-family: 'Inconsolata', monospace;
+}
+
+#skill .fill {
+  animation-name: fillAction;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(.2, .6, .8, .4);
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+#skill #waveShape {
+  animation-name: waveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  fill: #DDA977;
+}
+
+.skill-container {
+  width: 100%;
+  padding: 0;
+}
+
+/* Skills-klasser  */
+.evne1 .fill {
+  padding-top: 5px;
+}
+
+.evne2 .fill {
+  padding-top: 5px;
+}
+
+.evne3 .fill {
+  padding-top: 30px;
+}
+
+.evne4 .fill {
+  padding-top: 30px;
+}
+
+.evne5 .fill {
+  padding-top: 30px;
+}
+
+.evne6 .fill {
+  padding-top: 30px;
+}
+
+.prog1 .fill {
+  padding-top: 15px;
+}
+
+.prog2 .fill {
+  padding-top: 10px;
+}
+
+.prog3 .fill {
+  padding-top: 50px;
+}
+
+.prog4 .fill {
+  padding-top: 10px;
+}
+
+.prog5 .fill {
+  padding-top: 5px;
+}
+
+.prog6 .fill {
+  padding-top: 50px;
 }
 
 /* Animations-klasser */
@@ -942,6 +1072,30 @@ p.cursor::after {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes fillAction {
+  0% {
+    -webkit-transform: translate(0, 150px);
+    transform: translate(0, 150px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
+}
+
+@keyframes waveAction {
+  0% {
+    -webkit-transform: translate(-150px, 0);
+    transform: translate(-150px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
