@@ -22,7 +22,7 @@
         <h2 class="line-1 noselect">Hi! I'm Andreas</h2>
 
         <h1 class="line-2 noselect" id="animate-time">Welcome to my Portfolio</h1>
-        <div onclick="moveSplash()" class="lap" id="knap">
+        <div onclick="moveSplash()" class="lap" id="next1">
           <span class="line-3 mx-auto noselect">Continue&#8250;</span>
         </div>
       </div>
@@ -37,11 +37,21 @@
       <h2 id="undertitel" class="mx-auto" style="text-align: center;">SIT BACK AND RELAX!<br> I MIGHT BE WHAT YOU'RE LOOKING FOR. </h2>
 
       <div class="container knapper mx-auto">
-        <div class="no-select mx-auto lap" onclick="showContent()" id="next-container">
+        <div class="no-select mx-auto lap" onclick="showContent()" id="next2">
           <span class="no-select" id="next-knap">Continue&#8250;</span>
         </div>
       </div>
-      <div class="mx-auto align-content-center no-select" id="describe">
+    </div>
+
+    <div class="mx-auto align-content-center no-select" id="describe">
+      <!-- //Scroll INdikator-->
+      <div class="scroll-down" id="scroll-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- //ABOUT-->
+      <div class="mb-5 container">
         <h1> About Me:</h1>
         <h2> Let me tell you a bit about myself, before we move on to my previous work.</h2>
         <p> I'm a 30 year old fellow, currently on my 3rd semester as a Multimediadesigner at KEA. Before i started at KEA, i've had a taste of alot of educations - meaning my skills are broad,
@@ -52,195 +62,301 @@
           with design and aesthetics - no matter the subject. Everything started with a camera, and a love for cinematography, both still and moving. <br> Now as a
           <b>Multimedia Designer</b>, my creative life is oriented around branding, content creation and web-design as a whole. I love challenging the conventions by thinking out of the box and provoke the ideas of functional design. <br>
         </p>
-        <div class="scroll-down" id="scroll-indicator">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="mb-5 mt-5 container d-flex skill-container row row-cols-1 row-cols-md-2 row-cols-lg-3  justify-content-center ">
-          <h1> Skills:</h1>
-          <h2> The past semester we have been fiddling with the following languages and platforms. The amount of fill represents my knowledge on the subject.</h2>
-          <div id="skill" class=" col evne1">
+      </div>
+      <!-- //SKILLS 1-->
+      <h1> Skills:</h1>
+      <h2> The past semester we have been fiddling with the following languages and platforms. The amount of fill represents my knowledge on the subject.</h2>
+      <div class="mb-5 mt-5 container d-flex skill-container row row-cols-1 row-cols-md-2 row-cols-lg-3  justify-content-center ">
+        <div class=" col  skill evne1">
 
-            <div class="overlay">
-              <div class=" skill-value-procent">
+          <div class="overlay">
+            <div class=" skill-value-procent">
 
-                <p class="mx-auto">
-                  80&#37;</p>
-              </div>
+              <p class="mx-auto">
+                80&#37;</p>
             </div>
-            <p class="skill-value align-content-center">
-              HTML
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+          </div>
+          <p class="skill-value align-content-center">
+            HTML
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
           	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
           	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
-          <div id="skill" class=" col evne2">
-            <p class="skill-value">
-              CSS
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+        </div>
+        <div class=" col  skill evne2">
+          <p class="skill-value">
+            CSS
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
               	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
               	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
-          <div id="skill" class=" col evne3">
-            <p class="skill-value">
-              JS
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+        </div>
+        <div class=" col  skill evne3">
+          <p class="skill-value">
+            JS
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
               	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
               	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-
-          <div id="skill" class=" col evne4">
-            <p class="skill-value">
-              CMS
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-          <div id="skill" class=" col evne5">
-            <p class="skill-value">
-              Bootstrap
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-          <div id="skill" class=" col evne6">
-            <p class="skill-value">
-              SEO
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
         </div>
 
-        <div class="mb-5 mt-5 container d-flex skill-container row row-cols-1 row-cols-md-2 row-cols-lg-3  justify-content-center ">
-
-          <h2>Adobe Creative Cloud-apps are always the go-to for any business really, but im never afraid to try something new. I'm a good learner with anything tech-wise.!</h2>
-          <div id="skill" class=" col prog1">
-
-            <div class="overlay">
-              <div class=" skill-value-procent">
-
-                <p class="mx-auto">
-                  80&#37;</p>
-              </div>
-            </div>
-            <p class="skill-value align-content-center">
-              Adobe Photoshop
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-          	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-          	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-          <div id="skill" class=" col prog2">
-            <p class="skill-value">
-              Adobe Illustrator
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-              	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-              	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-          <div id="skill" class=" col prog3">
-            <p class="skill-value">
-              Adobe Premiere Pro
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
-              	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
-              	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
-          </div>
-
-          <div id="skill" class=" col prog4">
-            <p class="skill-value">
-              Adobe XD
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+        <div class=" col  skill evne4">
+          <p class="skill-value">
+            CMS
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
             	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
             	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
-          <div id="skill" class=" col prog5">
-            <p class="skill-value">
-              Adobe Lightroom
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+        </div>
+        <div class=" col  skill evne5">
+          <p class="skill-value">
+            Bootstrap
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
             	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
             	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
-          <div id="skill" class=" col prog6">
-            <p class="skill-value">
-              Adobe AutoDesk
-            </p>
-            <div class="fill">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+        </div>
+        <div class=" col  skill evne6">
+          <p class="skill-value">
+            SEO
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
             	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
             	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
-              </svg>
-            </div>
+            </svg>
           </div>
         </div>
       </div>
 
-    </div>
+      <!-- //SKILLS 2 -->
+
+      <h2>Adobe Creative Cloud-apps are always the go-to for any business really, but im never afraid to try something new. I'm a good learner with anything tech-wise.!</h2>
+      <div class="mb-5 mt-5 container d-flex skill-container row row-cols-1 row-cols-md-2 row-cols-lg-3  justify-content-center ">
+        <div class=" col  skill prog1">
+
+          <div class="overlay">
+            <div class=" skill-value-procent">
+
+              <p class="mx-auto">
+                80&#37;</p>
+            </div>
+          </div>
+          <p class="skill-value align-content-center">
+            Adobe Photoshop
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+          	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+          	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+        <div class=" col  skill prog2">
+          <p class="skill-value">
+            Adobe Illustrator
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+              	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+              	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+        <div class=" col  skill prog3">
+          <p class="skill-value">
+            Adobe Premiere Pro
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+              	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+              	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class=" col  skill prog4">
+          <p class="skill-value">
+            Adobe XD
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+        <div class=" col  skill prog5">
+          <p class="skill-value">
+            Adobe Lightroom
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+        <div class=" col  skill prog6">
+          <p class="skill-value">
+            Adobe AutoDesk
+          </p>
+          <div class="fill">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <path fill="#04ACFF" class="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+            	c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+            	c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <h1>Personal Resume:</h1>
+      <!-- //Uddannelse -->
+      <div class="container mb-5 mt-5">
+
+        <h3>Education:</h3>
+        <ul class="ul_main">
+          <li class="udd1">MultiMedieDesigner<ul>
+              <li class="udd2">Københavns Erhvervsakademi</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="ul_main">
+          <li class="udd1">HF Enkeltfag<ul>
+              <li class="udd2">VUC Roskilde</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="ul_main">
+          <li class="udd1">Holbæk Kunsthøjskole<ul>
+              <li class="udd2">Digitalt Fotogafi<ul class="ul_main ud">
+                  <li class="udd3">⋱ Lisa Strömbeck</li>
+
+                </ul>
+              </li>
+              <li class="udd2">Video<ul class="ul_main ud">
+                  <li class="udd3">⋱ Steen Schapiro</li>
+
+                </ul>
+              </li>
+              <li class="udd2">Film Historie<ul class="ul_main ud">
+                  <li class="udd3">⋱ Thomas Friisholm</li>
+
+                </ul>
+              </li>
+              <li class="udd2">Arkitektur<ul class="ul_main ud">
+                  <li class="udd3">⋱ Nis Rømer</li>
+
+                </ul>
+              </li>
+              <li class="udd2">Grafisk Design<ul class="ul_main ud">
+                  <li class="udd3">⋱ ...</li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="ul_main">
+          <li class="udd1">Butiksassistent<ul>
+              <li class="udd2">RHS</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- //Frivilligt -->
+      <div class="container mb-5 mt-5">
+
+        <h3>Volutering:</h3>
+        <ul class="ul_main">
+          <li class="udd1">Project's Abroad<ul class="ul_main">
+              <li class="udd2">Conservation - South Africa<ul>
+                  <li class="udd3">Bird Identification <ul class="ul_main ud">
+                      <li>⋱Judi Gounaris &amp; Helena Fitchat</li>
+
+                    </ul>
+                  </li>
+                  <li class="udd3">Conservation Debate<ul class="ul_main ud">
+                      <li>⋱Judi Gounaris &amp; Helena Fitchat</li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="udd2">Conservation - Thailand<ul>
+                  <li class="udd3">Padi Course - Advanced Diver<ul class="ul_main ud">
+                      <li>⋱Jason Russell-Smith</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- //Arbejde -->
+      <div class="container mb-5 mt-5">
+
+
+        <h3>Work:</h3>
+        <ul class="ul_main">
+          <li class="udd1">Klargøring, Web, Foto og IT<ul>
+              <li class="udd2">Arne Jensen Automobiler A/S</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="ul_main">
+          <li class="udd1">Grøntafdelingen<ul>
+              <li class="udd2">Føtex, Ros Torv</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+
 
     </div>
+    <div onclick="showNAV()" class="lap " id="next3">
+      <span class="line4 mx-auto noselect">Continue&#8250;</span>
+    </div>
+
 
 
 
     <div class=" container-fluid  d-flex flex-column justify-content-center align-content-center " id="nav">
       <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
-        <a href="#">Who am i?</a>
+        <a href="#">Go back</a>
       </div>
-      <h1 class="m-5 mx-auto">Previous work:</h1>
+      <h2 class="m-5 mx-auto">What do you want to see?</h2>
       <div class=" navknap d-flex justify-content-center align-content-center mx-auto">
         <a href="#">Webdesign</a>
       </div>
@@ -251,6 +367,7 @@
         <a href="#">Photography</a>
       </div>
     </div>
+
 
 
 

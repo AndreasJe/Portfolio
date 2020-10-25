@@ -1,17 +1,20 @@
 let gaest = document.getElementById("splash");
 
-function codeAddress() {
 
+
+
+function codeAddress() {
   gaest.classList.add("firstmove");
 }
 window.onload = codeAddress;
+
 console.log("Start animation på splash unit");
 
 
 
 
 let box = document.getElementById("animate-time");
-let knappelap = document.getElementById("knap");
+let knappelap = document.getElementById("next1");
 
 
 box.onanimationstart = function(event) {
@@ -31,8 +34,9 @@ let bil = document.getElementById("splash");
 let about = document.getElementById("about");
 let position = document.getElementById("positions");
 let next = document.getElementById("next-knap");
-let nextCon = document.getElementById("next-container");
-let nav = document.getElementById("nav");
+let nextCon = document.getElementById("next2");
+let next3 = document.getElementById("next3");
+let menu = document.getElementById("nav");
 let navButtons = document.getElementsByClassName('navknap');
 let undertitel = document.getElementById('undertitel');
 let describe = document.getElementById("describe");
@@ -69,13 +73,22 @@ function moveSplash() {
 function showContent() {
 
 
+  about.style.visibility = 'hidden';
   position.style.display = 'none';
   undertitel.style.display = 'none';
   nextCon.style.opacity = '0';
   console.log("Skjul tidligere side, opstart content");
   describe.style.display = 'block';
+  next3.classList.add("show");
 }
 
+function showNAV() {
+
+  describe.style.display = 'none';
+  console.log("Skjul tidligere side, opstart content");
+  menu.style.visibility = 'visible';
+
+}
 
 
 // Typewriter funktion til overskriften på om mig siden:
