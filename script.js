@@ -9,6 +9,7 @@ let next2 = document.getElementById("knap2");
 let next3 = document.getElementById("knap3");
 let next4 = document.getElementById("knap4");
 let next5 = document.getElementById("knap5");
+let next6 = document.getElementById("knap6");
 let billeder = document.getElementById("billeder");
 let menu = document.getElementById("nav");
 let contact = document.getElementById("contact");
@@ -127,8 +128,16 @@ function showContact() {
     web.style.display = 'none';
     contact.style.display = 'block';
     console.log("Skjul tidligere side, opstarter Contact content");
+    next5.style.display = 'none';
+    next6.style.display = 'flex';
 
   }, 1000);
+
+  setTimeout(function() {
+    att2.classList.add("bounce-bottom");
+    att1.classList.add("bounce-bottom");
+  }, 2500);
+
 }
 
 
