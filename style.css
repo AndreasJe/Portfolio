@@ -285,6 +285,11 @@ a:hover {
   font-size: 0.75rem !important;
 }
 
+#knap4 {
+  display: none;
+  font-size: 0.75rem !important;
+}
+
 /*Animation til "Continue" Knap  */
 .lap {
   width: 140px;
@@ -584,9 +589,6 @@ p.cursor::after {
 
 #video {
   -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
   left: 10vw;
   position: fixed;
   top: 5vh;
@@ -632,7 +634,7 @@ p.cursor::after {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 40px;
   -webkit-clip-path: var(--clip-path);
   clip-path: var(--clip-path);
   -webkit-transition: -webkit-clip-path var(--duration) var(--timing-function);
@@ -798,7 +800,6 @@ iframe {
   margin-bottom: 10vh;
   overflow: visible;
 }
-}
 
 .beskrivelse {
   padding: 1rem;
@@ -828,6 +829,18 @@ iframe {
   height: 55vh;
   display: none;
   overflow-y: scroll;
+}
+
+#web {
+  -ms-overflow-style: none;
+  left: 10vw;
+  position: fixed;
+  top: 5vh;
+  width: 80vw;
+  height: 70vh;
+  display: none;
+  overflow-y: scroll;
+  overflow-x: visible;
 }
 
 /* Billeder - Underside*/
@@ -1530,7 +1543,6 @@ iframe {
   width: 75vw;
   height: 50vh;
 }
-}
 
 @media (min-width:900px) {
   p {
@@ -1662,7 +1674,7 @@ iframe {
   }
 
   #describe {
-    width: 60vw;
+    width: 75vw;
     padding: 15vw;
     padding-top: 0;
   }
@@ -1779,13 +1791,13 @@ iframe {
   }
 
   #video {
-    width: 45vw;
+    width: 75vw;
     top: 15vh;
     height: 70vh;
   }
 
   #billeder {
-    width: 45vw;
+    width: 75vw;
     top: 15vh;
     height: 70vh;
   }
@@ -1793,8 +1805,18 @@ iframe {
   #undertitel {
     opacity: 0;
     position: fixed;
-    width: 27vw;
+    width: 50vw;
     top: 75%;
-    left: 20vw;
+    left: 25vw;
+  }
+
+  .knapper {
+    bottom: 5%;
+  }
+
+  #web {
+    width: 75vw;
+    top: 15vh;
+    height: 70vh;
   }
 }

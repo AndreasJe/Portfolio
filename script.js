@@ -11,6 +11,7 @@ let next4 = document.getElementById("knap4");
 let billeder = document.getElementById("billeder");
 let menu = document.getElementById("nav");
 let vid = document.getElementById("video");
+let web = document.getElementById("web");
 let indi2 = document.getElementById("scroll-indicator2");
 let navButtons = document.getElementsByClassName('navknap');
 let undertitel = document.getElementById('undertitel');
@@ -101,7 +102,19 @@ function showPhot() {
     billeder.style.display = 'block';
     console.log("Skjul tidligere side, opstarter Photography content");
     next3.style.display = 'none';
+    next4.style.display = 'flex';
     indi2.classList.add("hide");
+
+  }, 1000);
+}
+
+function showWeb() {
+
+  setTimeout(function() {
+    billeder.style.display = 'none';
+    web.style.display = 'block';
+    console.log("Skjul tidligere side, opstarter Photography content");
+    next4.style.display = 'none';
 
   }, 1000);
 }
