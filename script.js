@@ -8,8 +8,10 @@ let skriv1 = document.getElementById("skriv1");
 let next2 = document.getElementById("knap2");
 let next3 = document.getElementById("knap3");
 let next4 = document.getElementById("knap4");
+let next5 = document.getElementById("knap5");
 let billeder = document.getElementById("billeder");
 let menu = document.getElementById("nav");
+let contact = document.getElementById("contact");
 let vid = document.getElementById("video");
 let web = document.getElementById("web");
 let indi2 = document.getElementById("scroll-indicator2");
@@ -17,7 +19,6 @@ let navButtons = document.getElementsByClassName('navknap');
 let undertitel = document.getElementById('undertitel');
 let describe = document.getElementById("describe");
 let box = document.getElementById("animate-time");
-let knappelap = document.getElementById("next1");
 
 
 
@@ -113,8 +114,19 @@ function showWeb() {
   setTimeout(function() {
     billeder.style.display = 'none';
     web.style.display = 'block';
-    console.log("Skjul tidligere side, opstarter Photography content");
+    console.log("Skjul tidligere side, opstarter Web content");
     next4.style.display = 'none';
+    next5.style.display = 'flex';
+
+  }, 1000);
+}
+
+function showContact() {
+
+  setTimeout(function() {
+    web.style.display = 'none';
+    contact.style.display = 'block';
+    console.log("Skjul tidligere side, opstarter Contact content");
 
   }, 1000);
 }
