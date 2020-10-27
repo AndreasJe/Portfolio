@@ -1,48 +1,47 @@
 let gaest = document.getElementById("splash");
+let fest = document.getElementById("textbox");
+let bil = document.getElementById("splash");
+let about = document.getElementById("about");
+let position = document.getElementById("positions");
+let next1 = document.getElementById("knap1");
+let skriv1 = document.getElementById("skriv1");
+let next2 = document.getElementById("knap2");
+let next3 = document.getElementById("knap3");
+let next4 = document.getElementById("knap4");
+let billeder = document.getElementById("billeder");
+let menu = document.getElementById("nav");
+let vid = document.getElementById("video");
+let indi2 = document.getElementById("scroll-indicator2");
+let navButtons = document.getElementsByClassName('navknap');
+let undertitel = document.getElementById('undertitel');
+let describe = document.getElementById("describe");
+let box = document.getElementById("animate-time");
+let knappelap = document.getElementById("next1");
 
 
 
+
+
+window.onload = codeAddress;
 
 function codeAddress() {
   gaest.classList.add("firstmove");
 }
-window.onload = codeAddress;
 
 console.log("Start animation på splash unit");
 
 
 
 
-let box = document.getElementById("animate-time");
-let knappelap = document.getElementById("next1");
 
 
-box.onanimationstart = function(event) {
-  console.log("Animation startet, knap vises efterfølgende");
-  setTimeout(function() {
-    knappelap.style.opacity = '1';
-  }, 3000);
-}
+box.onanimationstart = function(event) {}
 
 
 
 box.onanimationend = function(event) {
 
-};
-let fest = document.getElementById("textbox");
-let bil = document.getElementById("splash");
-let about = document.getElementById("about");
-let position = document.getElementById("positions");
-let next = document.getElementById("next-knap");
-let nextCon = document.getElementById("next2");
-let next3 = document.getElementById("next3");
-let menu = document.getElementById("nav");
-let navButtons = document.getElementsByClassName('navknap');
-let undertitel = document.getElementById('undertitel');
-let describe = document.getElementById("describe");
 
-
-function moveSplash() {
 
 
   bil.classList.add("secondmove");
@@ -51,17 +50,16 @@ function moveSplash() {
   //Forsinker Fjernelse af oprindelig velkomst tekst
   setTimeout(function() {
     fest.classList.add("flicker-out-1");
+    skriv1.classList.add("knap-skriv");
   }, 1500);
 
   // Forsinker visning af om mig
   setTimeout(function() {
     about.style.visibility = 'visible';
-    nextCon.style.opacity = '1';
+    next1.style.display = 'flex';
     position.classList.add("slide-in-left");
-    next.classList.add("line4");
     undertitel.classList.add("show");
-    next.classList.add("show");
-  }, 4500);
+  }, 3500);
 
   // Forsinker TypeWriter JS til om mig overskrift
   setTimeout(function() {
@@ -72,22 +70,40 @@ function moveSplash() {
 // Skifter content ud med Om mig skrift
 function showContent() {
 
-
-  about.style.visibility = 'hidden';
-  position.style.display = 'none';
-  undertitel.style.display = 'none';
-  nextCon.style.opacity = '0';
-  console.log("Skjul tidligere side, opstart content");
-  describe.style.display = 'block';
-  next3.classList.add("show");
+  setTimeout(function() {
+    about.style.visibility = 'hidden';
+    position.style.display = 'none';
+    undertitel.style.display = 'none';
+    next1.style.display = 'none';
+    console.log("Skjul Forside, Vis About");
+    describe.style.display = 'block';
+    next2.style.display = 'flex';
+  }, 1000);
 }
 
-function showNAV() {
+function showVid() {
 
-  describe.style.display = 'none';
-  console.log("Skjul tidligere side, opstart content");
-  menu.style.visibility = 'visible';
+  setTimeout(function() {
+    describe.style.display = 'none';
+    console.log("Skjul About, vis Video content");
+    vid.style.display = 'block';
+    indi2.classList.add("show");
+    next2.style.display = 'none';
+    next3.style.display = 'flex';
+  }, 1000);
 
+}
+
+function showPhot() {
+
+  setTimeout(function() {
+    vid.style.display = 'none';
+    billeder.style.display = 'block';
+    console.log("Skjul tidligere side, opstarter Photography content");
+    next3.style.display = 'none';
+    indi2.classList.add("hide");
+
+  }, 1000);
 }
 
 
@@ -155,12 +171,3 @@ TxtRotate.prototype.tick = function() {
     that.tick();
   }, delta);
 };
-
-// TEST PÅ SKIFT AF TO SIDET BRØDTEKST.
-
-// function vistekst2() {
-//   console.log("Kom igang")
-//   const nextText = 'Learning to work with HTML5, CSS and JavaScript has opened a new world for me, and i wish to continue to develop my skills even further. <br> Hopefully ';
-//   document.getElementById('broed').innerHTML = nextText;
-//   document.getElementById("tekst-knap").innerText = "2/2";
-// }
