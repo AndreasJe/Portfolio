@@ -129,12 +129,6 @@ section {
   width: 100px;
 }
 
-.some:hover {
-  height: 90px;
-  width: 90px;
-  transition: 600ms;
-}
-
 .some-container {
   width: 100vw;
 }
@@ -904,13 +898,13 @@ p.cursor::after {
   -webkit-background-position: 30%;
   transform: translateX(0);
   -webkit-transform: translateX(0);
-  transition: 5s;
-  -webkit-transition: 5s;
+  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
 }
 
 .secondmove {
-  transition: 3s;
-  -webkit-transition: 3s;
+  transition-duration: 3s;
+  -webkit-transition-duration: 3s;
   background-position: 5%;
   -webkit-background-position: 5%;
 }
@@ -1645,7 +1639,7 @@ p.cursor::after {
 @media (min-width:750px) {
   .secondmove {
     background-position: -18%;
-    -webkit-background-position: -15%;
+    -webkit-background-position: -18%;
   }
 
   p {
@@ -1699,6 +1693,11 @@ p.cursor::after {
     width: 80vw;
     padding: 10vw;
   }
+
+  .skill-container {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 .udd1 {
@@ -1721,8 +1720,12 @@ p.cursor::after {
 
 #contact {
   top: 15vh;
-  width: 100vw;
+  width: 70vw;
   height: 75vh;
+}
+
+.some-container {
+  width: 60vw;
 }
 
 .wrap img {
@@ -2010,7 +2013,7 @@ p.cursor::after {
   }
 
   #contact {
-    width: 45vw;
+    width: 65vw;
     top: 15vh;
     height: 70vh;
   }
@@ -2036,7 +2039,7 @@ p.cursor::after {
   }
 
   .some-container {
-    width: 20vw;
+    width: 70%;
     margin-left: 15vw;
   }
 
@@ -2048,7 +2051,7 @@ p.cursor::after {
 
 @media (min-width: 2100px) {
   .skill-container {
-    width: 40%;
+    width: 45%;
   }
 
   .some-container {
